@@ -6,29 +6,21 @@
     </head>
 
     <body>
-
+        <canvas height=500 width=500>
+        <canvas>
     </body>
 
     <footer>
         <!-- LIB -->
         <script src="cdn/js/lib/jquery-3.1.1.min.js"></script>
-        <script>
-            var temp = "";
-            
-            $(document).ready(function(){
-                start();
-            });
+        
+        <!-- Main / Init -->
+        <script src="cdn/js/init.js"></script>
+        <script src="cdn/js/main.js"></script>
 
-            function start(){
-                temp = setTimeout("loop()", 1000);
-            }
+        <!-- FUNCTIONS-->
+        <script src="cdn/js/func/functions.js"></script>
 
-            function loop(){
-                console.log("xd");
-                clearTimeout(temp);
-                temp = setTimeout("loop()", 33);
-            }
-
-        </script>
+        <!-- Class -->
     </footer>
 </html>
