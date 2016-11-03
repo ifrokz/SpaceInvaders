@@ -1,4 +1,5 @@
         --- 03/11/2016 --- 
 
     - se ha creado la estructura del proyecto de carpetas / archivos y repositorio en GitHub
+    - Se ha creado el bucle principal del juego.
     - El canvas se ajusta a la pantalla en el inicio del juego.
