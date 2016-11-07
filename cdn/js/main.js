@@ -11,8 +11,9 @@ function loop(){
     ctx.clearRect(0,0,windowWidth,windowHeight);
     // PLAYER
     playerManager();
-    console.log(enemy1);
-
+    enemyManager();
+    shotManager();
+    collisionManager()
     // TEMP
     clearTimeout(temp);
     temp=setTimeout("loop();",33);
