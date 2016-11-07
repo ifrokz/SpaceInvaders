@@ -33,8 +33,11 @@ cPlayer = function(){
         } 
 
         this.posX += this.speedX;
-        ctx.fillStyle = "red";
-        ctx.fillRect(this.posX,this.posY,this.width,this.height);
+
+        ctx.drawImage(playerImg,this.posX,this.posY,this.width,this.height);
+
+        /*ctx.fillStyle = "red";
+        ctx.fillRect(this.posX,this.posY,this.width,this.height);*/
     }
 }
 
