@@ -10,3 +10,5 @@ var playerImg = new Image();
 playerImg.src = "cdn/img/player/1.png";
 
 //  PLAYER
+
+//Enemy1

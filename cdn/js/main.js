@@ -11,7 +11,7 @@ function loop(){
     ctx.clearRect(0,0,windowWidth,windowHeight);
     // PLAYER
     playerManager();
-    console.log(player.dir);
+    console.log(enemy1);
 
     // TEMP
     clearTimeout(temp);
