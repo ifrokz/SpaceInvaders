@@ -44,7 +44,7 @@ function shotCollision(){
             //if(Math.abs((asteroid[a].posY+asteroid[a].height/2)-(player.getPosY()+playerHeight/2)) < playerHeight/2+asteroid[a].height/2 ){
             if(Math.abs((enemy[e].posX+enemy[e].width/2)-(shot[s].posX+shot[s].width/2))<shot[s].width/2+enemy[e].width/2){
                 if(Math.abs((enemy[e].posY+enemy[e].height/2)-(shot[s].posY+shot[s].height/2))<shot[s].width/2+enemy[e].width/2){
-                    alert("xd");
+                    console.log("xd");
                 }
             }
         }
