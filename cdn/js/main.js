@@ -3,12 +3,17 @@ $(document).ready(function(){
 });
 
 function start(){
-    resizeCanvas();
-    temp = setTimeout("loop()", 1000);
+    initResize()
+    temp = setTimeout("loop();",1000)
 }
 
 function loop(){
-    console.log("xd");
+    ctx.clearRect(0,0,windowWidth,windowHeight);
+    // PLAYER
+    playerManager();
+    console.log(player.dir);
+
+    // TEMP
     clearTimeout(temp);
-    temp = setTimeout("loop()", 33);
+    temp=setTimeout("loop();",33);
 }
