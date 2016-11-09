@@ -78,3 +78,41 @@ function enemyMove(){
         enemy[e].move();
     }
 }
+
+
+
+
+
+function setLevel() {
+    levelCanvas = document.getElementById("lienzo");
+    lvCtx = lienzo.getContext("2d");
+
+    lvCtx.drawImage(imglevel,0,0);
+
+    var datos = lvCtx.getImageData(0,0,48,27);
+    var ctxData = datos.data;
+
+    for(var i =0;i<ctxData.length;i+=4){
+        if(ctxData[i] == 255 && ctxData[i+1] == 255 && ctxData[i+2] == 255){
+            // ES UN PIXEL BLANCO
+        }else{
+            var enemycount = enemy.length;
+            enemy.push(new cEnemy1((i/4)%48,Math.floor((i/4)/48)));
+            console.log((i/4)/48);
+            if(ctxData[i] == 0 && ctxData[i+1] == 0 && ctxData[i+2] == 255){
+                //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Blue");
+                enemy[enemycount].type = "blue";
+            }
+            if(ctxData[i] == 0 && ctxData[i+1] == 255 && ctxData[i+2] == 0){
+                //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Green");
+                enemy[enemycount].type = "green";
+            }
+            if(ctxData[i] == 255 && ctxData[i+1] == 0 && ctxData[i+2] == 0){
+                //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Red");     
+                enemy[enemycount].type = "red";
+            }
+            console.log(enemy[enemycount]) 
+        }
+    }
+     
+}

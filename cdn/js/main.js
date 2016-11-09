@@ -3,7 +3,8 @@ $(document).ready(function(){
 });
 
 function start(){
-    initResize()
+    initResize();
+    setLevel();
     temp = setTimeout("loop();",1000)
 }
 

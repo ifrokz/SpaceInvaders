@@ -15,3 +15,9 @@ enemyImg.src = "cdn/img/player/1.png";
     var shot = new Array();
 //Enemy1
 var enemy = new Array();
+
+
+/// LEVELS ///
+
+ var imglevel = new Image();
+imglevel.src= "level1.png";

@@ -2,8 +2,8 @@ cEnemy1 = function(posX,posY,type){
     this.speedX = 5;
     this.width = 50;
     this.height = 50;
-    this.posX = posX-this.width/2;
-    this.posY = posY;
+    this.posX = (posX*this.width)+this.width/2;
+    this.posY = (posY*this.height)+this.width/2;
     this.type = type;
     this.move = function(){
         if(this.posX+this.width>=windowWidth){
@@ -18,4 +18,3 @@ cEnemy1 = function(posX,posY,type){
     }
 }
 
-enemy[0] = new cEnemy1(windowWidth/2,windowWidth/10);
