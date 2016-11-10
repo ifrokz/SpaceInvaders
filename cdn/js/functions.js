@@ -100,11 +100,13 @@ function enemyMove(){
 function newLevel(){
     if(enemy.length == 0){
         level++;
+        shot.splice(0,shot.length);
         if(level<=totalLevels){
             setLevel();
         }else{
             alert("Te has pasado el juego");
-        }     
+        }
+
     }
 }
 

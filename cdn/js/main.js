@@ -18,5 +18,5 @@ function loop(){
     newLevel();
     // TEMP
     clearTimeout(temp);
-    temp=setTimeout("loop();",33);
+    temp=setTimeout("loop();",17);
 }
