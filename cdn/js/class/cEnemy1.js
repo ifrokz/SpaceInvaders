@@ -1,7 +1,7 @@
 cEnemy1 = function(posX,posY,type){
     this.speedX = 5;
-    this.width = 50;
-    this.height = 50;
+    this.width = windowWidth/48;
+    this.height = this.width;
     this.posX = (posX*this.width)+this.width/2;
     this.posY = (posY*this.height)+this.width/2;
     this.type = type;
