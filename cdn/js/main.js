@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 function start(){
     initResize();
-    setLevel();
     temp = setTimeout("loop();",1000)
 }
 
@@ -15,6 +14,8 @@ function loop(){
     enemyManager();
     shotManager();
     collisionManager()
+
+    newLevel();
     // TEMP
     clearTimeout(temp);
     temp=setTimeout("loop();",33);

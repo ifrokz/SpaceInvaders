@@ -38,6 +38,7 @@ $(document).keyup(function(){
 function collisionManager(){
     shotCollision();
 }
+
 function shotCollision(){
     for(var e  in enemy){
         for(var s in shot){
@@ -45,6 +46,9 @@ function shotCollision(){
             if(Math.abs((enemy[e].posX+enemy[e].width/2)-(shot[s].posX+shot[s].width/2))<shot[s].width/2+enemy[e].width/2){
                 if(Math.abs((enemy[e].posY+enemy[e].height/2)-(shot[s].posY+shot[s].height/2))<shot[s].width/2+enemy[e].width/2){
                     console.log("xd");
+                    shot.splice(s, 1);
+                    enemy.splice(e ,1);
+                    break;
                 }
             }
         }
@@ -80,14 +84,25 @@ function enemyMove(){
 }
 
 
-
-
+////////////////////////////////////////////////////////
+///                    New Level                     ///
+////////////////////////////////////////////////////////
+function newLevel(){
+    if(enemy.length == 0){
+        level++;
+        if(level<=totalLevels){
+            setLevel();
+        }else{
+            alert("Te has pasado el juego");
+        }     
+    }
+}
 
 function setLevel() {
     levelCanvas = document.getElementById("lienzo");
     lvCtx = lienzo.getContext("2d");
 
-    lvCtx.drawImage(imglevel,0,0);
+    lvCtx.drawImage(levelImg[level],0,0);
 
     var datos = lvCtx.getImageData(0,0,48,27);
     var ctxData = datos.data;

@@ -18,6 +18,10 @@ var enemy = new Array();
 
 
 /// LEVELS ///
-
- var imglevel = new Image();
-imglevel.src= "level1.png";
+var level = 0;
+var totalLevels = 2;
+var levelImg = new Array();
+for(var i = 1;i<=totalLevels;i++){
+    levelImg[i] = new Image();
+    levelImg[i].src= "cdn/img/level/"+i+".png";
+}
