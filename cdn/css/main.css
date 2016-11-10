@@ -4,7 +4,11 @@ body,html{
     overflow: hidden; 
 }
 
-canvas{
+#lienzo{
     border: 1px solid black;
 	background: black;
+}
+
+#level{
+    border: 1px solid black;
 }

@@ -104,7 +104,7 @@ function setLevel() {
 
     lvCtx.drawImage(levelImg[level],0,0);
 
-    var datos = lvCtx.getImageData(0,0,48,27);
+    var datos = lvCtx.getImageData(0,0,32,18);
     var ctxData = datos.data;
 
     for(var i =0;i<ctxData.length;i+=4){
@@ -112,8 +112,8 @@ function setLevel() {
             // ES UN PIXEL BLANCO
         }else{
             var enemycount = enemy.length;
-            enemy.push(new cEnemy1((i/4)%48,Math.floor((i/4)/48)));
-            console.log((i/4)/48);
+            enemy.push(new cEnemy1((i/4)%32,Math.floor((i/4)/32)));
+            console.log((i/4)/32);
             if(ctxData[i] == 0 && ctxData[i+1] == 0 && ctxData[i+2] == 255){
                 //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Blue");
                 enemy[enemycount].type = "blue";
