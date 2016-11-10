@@ -61,11 +61,21 @@ function shotCollision(){
 
 function shotManager(){
     playerShotMove();
+    shotLimits();
 }
 
 function playerShotMove(){
     for(var s in shot){
         shot[s].move();
+    }
+}
+
+function shotLimits(){
+    for(var s in shot){
+        if(shot[s].posY<0){
+            shot.splice(s, 1);
+            console.log("xd")
+        }
     }
 }
 
@@ -126,7 +136,6 @@ function setLevel() {
                 //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Red");     
                 enemy[enemycount].type = "red";
             }
-            console.log(enemy[enemycount]) 
         }
     }
      
