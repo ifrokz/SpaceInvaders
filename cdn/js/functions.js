@@ -125,7 +125,7 @@ function setLevel() {
         }else{
             var enemycount = enemy.length;
             enemy.push(new cEnemy1((i/4)%32,Math.floor((i/4)/32)));
-            console.log((i/4)/32);
+            //console.log((i/4)/32);
             if(ctxData[i] == 0 && ctxData[i+1] == 0 && ctxData[i+2] == 255){
                 //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Blue");
                 enemy[enemycount].type = "blue";
@@ -138,6 +138,11 @@ function setLevel() {
                 //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Red");     
                 enemy[enemycount].type = "red";
             }
+            if(ctxData[i] == 255 && ctxData[i+1] == 255 && ctxData[i+2] == 0){
+                //console.log(ctxData[i]+","+ctxData[i+1]+","+ctxData[i+2]+","+ctxData[i+3]+" - Red");     
+                enemy[enemycount].type = "yellow";
+            }
+            console.log(enemy);
         }
     }
      

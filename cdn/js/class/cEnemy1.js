@@ -14,7 +14,15 @@ cEnemy1 = function(posX,posY,type){
             this.posY += this.height;
         }
         this.posX+=this.speedX
-        ctx.drawImage(enemyImg,this.posX,this.posY,this.width,this.height);
+        if(this.type== "red"){
+            ctx.drawImage(enemyImgRed,this.posX,this.posY,this.width,this.height);
+        }else if(this.type == "green"){
+            ctx.drawImage(enemyImgGreen,this.posX,this.posY,this.width,this.height);
+        }else if(this.type == "blue"){
+             ctx.drawImage(enemyImgBlue,this.posX,this.posY,this.width,this.height);
+        }else{
+            ctx.drawImage(enemyImgYellow,this.posX,this.posY,this.width,this.height);
+        } 
     }
 }
 
